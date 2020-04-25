@@ -1,0 +1,64 @@
+.app-container {
+  font-family: sans-serif !important;
+  min-width: 50vw;
+  min-height: 40vh;
+  box-sizing: border-box;
+}
+.app-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.app-header-container {
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-bottom: 2px solid #b2babb;
+}
+.app-header-content {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  justify-content: flex-start;
+}
+.game-header-heading {
+  text-align: center;
+}
+.game-description {
+  font-size: 18px;
+  color: #3498db;
+}
+.game-score-container {
+  margin-top: 25px;
+  margin-left: 200px;
+  display: flex;
+  align-items: center;
+}
+.app-play-ground-container {
+  box-sizing: border-box;
+  /* padding: 30px 40px 30px 40px; */
+}
+
+.app-actions-container {
+  height: 20vh;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-top: 2px solid #b2babb;
+}
+
+.score-label {
+  margin-right: 20px;
+  font-size: 20px;
+}
+.score-value {
+  width: 100px;
+  height: 30px;
+  border: 1px solid #b2babb;
+  margin-right: -145px;
+  text-align: center;
+  padding-top: 10px;
+}
