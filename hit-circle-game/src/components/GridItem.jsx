@@ -32,23 +32,23 @@ class GridItem extends React.Component {
         let isCorrectHit = this.isItemSelected();
         if (isCorrectHit) {
             console.log("correct hit");
-            this.setState({ isCorrect: true, itemClicked: true });
+            this.setState({ isCorrect: true, itemClicked: true }, () => {
+                this.props.onHitCircle(isCorrectHit);
+            });
         }
         else {
             console.log("false hit");
-            this.setState({ isCorrect: false, itemClicked: true });
+            this.setState({ isCorrect: false, itemClicked: true }, () => {
+                this.props.onHitCircle(isCorrectHit);
+            });
         }
-        this.props.onHitCircle(isCorrectHit);
+
     };
 
     renderRadioIcon = () => {
 
         if (this.props.isGameStarted === false) {
             return <UnCheckedRadioButton />;
-        }
-
-        if (this.isItemSelected()) {
-            return <FilledRadioButton />;
         }
 
         if (
@@ -60,6 +60,10 @@ class GridItem extends React.Component {
                 return <CheckedRadioButton fillColor="red" />;
             }
         }
+        if (this.isItemSelected()) {
+            return <FilledRadioButton />;
+        }
+
 
         return <UnCheckedRadioButton />;
     };

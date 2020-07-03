@@ -122,6 +122,7 @@ class App extends React.Component {
                         {...this.props}
                         startGame={this.startGame}
                         stopGame={this.stopGame}
+                        isGameStarted={this.state.isGameStarted}
                     />
                 </div>
                 {this.state.showPopup ? (
